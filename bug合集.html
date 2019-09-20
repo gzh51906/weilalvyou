@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>bug合集</title>
+	<script type="text/javascript">
+		/*
+			 	1.Cannot set property 'onclick' of null
+			 	解决:找不到onclick前面的节点
+			 	
+			 	2.undefined
+			 	声明未赋值，解决方案，写了变量就要赋值，初始化
+			 	
+			 	3.num is not defined
+			 	num没有声明，找不到该变量
+			 	
+			 	4.当网页打开的比较慢时，可以通过下面的步骤
+				 		network => all => time 看时间
+				
+				5.出错问题VM71:1 Uncaught SyntaxError: Unexpected token 连 in JSON at position 0
+                       at JSON.parse (<anonymous>)
+                       at create (goodsList.js:66)
+                       at Object.success (goodsList.js:57)
+                       at j (jquery-1.11.0.min.js:2)
+                       at Object.fireWith [as resolveWith] (jquery-1.11.0.min.js:2)
+                       at x (jquery-1.11.0.min.js:4)
+                       at XMLHttpRequest.b (jquery-1.11.0.min.js:4)
+
+				解决网站：(https://www.cnblogs.com/54td/p/6074456.html)
+						就是其中php出现文字，或者逗号没有弄好
+					
+				6.VS code 编码设置/文件乱码解决方法
+						点击文件->首选项->设置，然后在右边用户设置输入：
+							"files.autoGuessEncoding": true
+							可以设置webstorm.
+
+
+				7.当后台html改变的时候，www里面没有改变。
+				
+					解决：重新关掉自动保存,再打开自动保存。
+					 
+				8.    $sql = "SELECT * FROM goods1 ORDER BY $paixu LIMIT $index,$num";报错
+						打印出来的数据是乱的
+						解决方法：是查询语句写错。逐步打印php数据。。。
+
+				9. Fatal error: Call to a member function fetch_all() on boolean in C:
+				\wamp\www\jumei\api\gooddetail.php on line 19
+				      解决方法：前端成功回调的地方。从列表页到详情页只有一条数据，用了map错误。。。。
+				
+				10.  当出现代码无法改变的时候，说明数据是从本地读取出来的。。。
+
+					  解决办法：1. 点击检查：---》network---->disable cache (清除缓存)；
+							   2. 点击右上角 ---> 更多工具 ---》 清除浏览数据。。。
+
+				11.   $ git clone git@github.com:gzh51906/outline.git
+                      Cloning into 'outline'...
+                      git@github.com: Permission denied (publickey).
+                      fatal: Could not read from remote repository.
+                      
+                      Please make sure you have the correct access rights
+                      and the repository exists.
+					解决办法： 密钥：$ ssh-keygen -t rsa -C  找到文件 复制 id_rsa.pub复制到自己gitup里面-->
+
+							重新打开。。。。。
+
+				12.   当上传github项目的时候，没有上传成功,不小心将其他的图标有对勾，那么如何取消这些图标呢。
+
+					解决办法：在你需要取消的图标上面：点击右键，--》显示图标（github有一个隐藏的功能）--》
+					点击隐藏的github--》就会消失图标
+
+				13.  SyntaxError: Unexpected end of input(node.js)
+						
+					解决办法：这种情况一般就是你写代码的时候，双引号，和单引号，用错了。 
+							 或者说成双的符号输入错误，比如说“”，‘’，{}，[]。 
+							 又或者说，语法不正常你这样用符合。所以你直接可以看你的符号是不是出问题了。
+				
+				14.  当服务器与浏览器没有关联的时候，你一定要明白，1，看商品用户信息（good.js）里面有没有res.send()发送
+						
+					  2，看服务器有，有没有安装supervisor,就可以实现同步功能。。。
+					  
+					  3。 一定要明白建立浏览器与服务器的几个步骤：
+							const express = require('express');//引入第三方文件
+
+							const { PORT } = require('./config.json'); //创建端口。
+
+							const router = require('./router');//连接模块 分块开发
+
+							const app = express();  //express会把所有的请求方式都作为方法挂载到app对象中，客户端发送请求并且会执行对应的回调函数
+
+							app.use(express.static('./'));//静态服务器
+
+							app.use(router);//路由接口 
+
+							app.listen(PORT, () => {
+    							console.log('服务器启动成功');
+							})
+
+
+				15.		Can't set headers after they are sent；
+
+						出现这个错误就表示。你在一个已经关闭的连接上又做一些写操作。
+						无论是res.json（） 还是 res.send() 
+						底层代码都是用res.end()结束。
+						也就是说如果你 res.json()后 又有出现了 res.xxxx()的操作
+						就会报上面的那个错误
+
+					你上面第一个例子报错是因为你在response调用end()后又出现了res的读写操作
+
+				
+				16.(vue)     Uncaught SyntaxError: Unexpected token new
+						
+						解决办法：标点符号写了，在let data 与 nue Vue 之间不应该有标点符号
+
+				17.(vue)    route config "component" for path: /home cannot be a string id. Use an actual component instead.
+						解决办法：主键不可以用单引号和双引号
+			*/
+		let arr = [1, 2, 3];
+		console.log(arr.concat(4, 5, [7, [9, 12]]))
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>
