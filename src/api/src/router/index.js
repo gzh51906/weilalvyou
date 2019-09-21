@@ -11,7 +11,12 @@ const {
 const sortRouter = require('./sort');
 const userRouter = require('./user');
 const homeRouter = require('./home');
+<<<<<<< HEAD
 const destinationRouter = require('./destination')
+=======
+const discoverRouter = require('./discover');
+
+>>>>>>> 45613485ed8b041fcdb68d2c092d51bb981f1b60
 
 
 // 利用中间bodyParse格式化请求参数
@@ -35,6 +40,7 @@ Router.use('/destination', destinationRouter);
 Router.use('/user', userRouter);
 Router.use('/home', homeRouter);
 Router.use('/sort', sortRouter);
+Router.use('/discover', discoverRouter);
 Router.get('/verify', (req, res) => {
     // 获取前端传入的token
     // 对token进行校验
