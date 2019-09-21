@@ -7,7 +7,8 @@ const { TabPane } = Tabs;
 class Destination extends Component {
     state = {
         citylist: [],
-        data: []
+        data: [],
+        current: "深圳"
     }
     onSearch = (val) => {
         console.log(val);
@@ -24,12 +25,17 @@ class Destination extends Component {
             citylist: cities
         })
     }
-    getContentData = async () => {
-        let { data: { data } } = await Api.get('destination/content', {})
-        console.log(data);
+    getContentData = async (sort) => {
+        if (sort) {
+            sort = sort;
 
+        } else {
+            sort = "深圳"
+        }
+        let { data: { data } } = await Api.post('destination/content', { sort: sort })
+        let list = data.length ? data[0].list : [];
         this.setState({
-            data: data
+            data: list, current: sort
         })
     }
     componentDidMount() {
@@ -37,7 +43,7 @@ class Destination extends Component {
         this.getContentData();
     }
     render() {
-        let { citylist } = this.state
+        let { citylist, data, current } = this.state
         return (<div id="destination">
             <header>
                 <h3>深圳<Icon type="caret-down" /></h3>
@@ -50,7 +56,9 @@ class Destination extends Component {
                     <ul>
                         {
                             citylist.map(item => {
-                                return <li key={item.name}>{item.name}</li>
+                                return <li key={item.name} onClick={this.getContentData.bind(this, item.name)} className={current == item.name ? 'active' : ''}>{item.name}
+                                    {current == item.name ? <i></i> : <></>}
+                                </li>
                             })
                         }
                     </ul>
@@ -58,18 +66,22 @@ class Destination extends Component {
             </header>
             <div className="content" style={{ marginTop: 125 }}>
                 <ul>
+                    {
+                        data.map(item => {
+                            return <li key={item.imageURL}>
+                                <div className="top">
+                                    <img src={`https://img.villaday.com${item.imageURL}`}></img>
+                                    <span>￥<i>{item.displayPrice}</i>起</span>
+                                </div>
+                                <div className="bottom">
+                                    <h3>{item.name}</h3>
+                                    <h5>{item.desc}</h5>
+                                    <span><Icon type="environment" />{item.address}</span>
+                                </div>
+                            </li>
+                        })
+                    }
 
-                    <li>
-                        <div className="top" style={{ width: '100%', height: 150, backgroundColor: 'pink' }}>
-                            <img></img>
-                            <span>￥<i>888</i>起</span>
-                        </div>
-                        <div className="bottom">
-                            <h3>深圳·较场尾</h3>
-                            <h5>连海岸线都不愿意离开的民宿村</h5>
-                            <p><Icon type="environment" />深圳大鹏新区</p>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </div>)

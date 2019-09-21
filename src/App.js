@@ -14,11 +14,44 @@ import Search from './pages/Destination/search'
 
 
 class App extends Component {
-  state = {}
+  state = {
+    current: "/home",
+    data: [
+      {
+        name: "首页",
+        path: "./home",
+        icon: "home"
+      }, {
+        name: "目的地",
+        path: "./destination",
+        icon: "environment"
+      }, {
+        name: "提交需求",
+        path: "./thinktank",
+        icon: "plus-circle"
+      }, {
+        name: "发现",
+        path: "./discover",
+        icon: "global"
+      }, {
+        name: "我的",
+        path: "./mine",
+        icon: "user"
+      }
+    ]
+  }
   goto = (path) => {
-    this.props.history.push(path)
+    this.props.history.push(path);
+    this.setState({
+      current: path
+    })
+  }
+  componentDidMount() {
   }
   render() {
+    let { current, data } = this.state;
+    let path1 = this.props.history.location.pathname;
+    path1=`.${path1}`;
     return (
       <div >
         <div>
@@ -34,11 +67,14 @@ class App extends Component {
           </Switch>
         </div>
         {this.props.location.pathname == "/search" ? <></> : <ul className="nav_footer_y" style={{ position: 'fixed', bottom: 0, left: 0, right: 0, background: '#fff' }}>
-          <li onClick={this.goto.bind(this, "./home")}><Icon type="home" />首页</li>
-          <li onClick={this.goto.bind(this, "./destination")}><Icon type="environment" />目的地</li>
-          <li onClick={this.goto.bind(this, "./thinktank")}><Icon type="plus-circle" theme="filled" className="colrname" />提交需求</li>
-          <li onClick={this.goto.bind(this, "./discover")}><Icon type="global" />发现</li>
-          <li onClick={this.goto.bind(this, "./mine")}><Icon type="user" />我的</li>
+          {
+            data.map(item => {
+              return <li onClick={this.goto.bind(this, `${item.path}`)} key={item.name} className={item.path == current ? 'active' : '' || item.path==path1?'active':''}>
+                <Icon type={item.icon} className={item.name == '提交需求' ? 'colrname' : ''} theme={item.name == '提交需求' ? 'filled' : ''} />
+                {item.name}
+                </li>
+            })
+          }
         </ul>
         }
 

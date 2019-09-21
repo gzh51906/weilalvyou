@@ -25,34 +25,32 @@ Router.get('/', async (req, res) => {
         data
     }))
 })
-// 
+
+// 查询指定
 Router.get('/content', async (req, res) => {
+    console.log(req.query);
+
     let {
-        skip,
-        limit,
         sort
     } = req.query;
-    let data = await find('citieslist', {}, {
-        skip,
-        limit,
-        sort
+    console.log('----', sort);
+    let data = await find('citieslist', {
+        sort: sort
     });
+    // res.send('res')
     res.send(formatData({
         data
     }))
 })
-
-// 查询指定的商品
-Router.get('/goods', async (req, res) => {
-    // console.log('----', req.query);
+Router.post('/content', async (req, res) => {
+    console.log("post");
     let {
-        id
-    } = req.query;
+        sort
+    } = req.body;
 
-    let data = await find('datalist', {
-        name: id
+    let data = await find('citieslist', {
+        sort: sort
     });
-    // res.send('res')
     res.send(formatData({
         data
     }))
