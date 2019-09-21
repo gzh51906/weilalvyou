@@ -18,7 +18,7 @@
 * .nav_footer_y {
   display: flex;
   margin: 0;
-  background-color: #fff;
+  background: #fff;
 }
 
 * .nav_footer_y li {
@@ -59,22 +59,39 @@
   margin: 2px 0px;
 }
 
-* .destination {
+* #destination {
   height: 900px;
   overflow: auto;
   background-color: orange;
   margin-bottom: 55px;
 }
 
-* .destination header {
+* #destination header {
   background-image: url(../pages/Destination/images/dest_bg.jpg);
   background-size: contain;
   height: 125px;
 }
 
-* .destination header h3 {
+* #destination header h3 {
   height: 40px;
   text-align: center;
   color: #fff;
   line-height: 40px;
+}
+
+* #destination header .ant-input-search {
+  width: 95%;
+  margin: auto;
+  padding-left: 10px;
+}
+
+* #destination header .ant-input-search .ant-input {
+  color: #ddd;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 35px;
+  font-size: 12px;
+}
+
+* #destination header .ant-input-search .ant-input-suffix i {
+  color: #fff;
 }
