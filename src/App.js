@@ -39,7 +39,12 @@ class App extends Component {
           <li onClick={this.goto.bind(this, "./discover")}><Icon type="global" />发现</li>
           <li onClick={this.goto.bind(this, "./mine")}><Icon type="user" />我的</li>
         </ul>
+        {
+          this.props.location.pathname == "/thinktank" ? <></> : <span className="online_serve"><Icon type="message" />在线咨询</span>
+        }
+
       </div >
+
     );
   }
 }
