@@ -11,7 +11,6 @@ const {
 const sortRouter = require('./sort');
 const userRouter = require('./user');
 const homeRouter = require('./home');
-const discoverRouter = require('./discover');
 
 
 
@@ -35,7 +34,6 @@ Router.use((req, res, next) => {
 Router.use('/user', userRouter);
 Router.use('/home', homeRouter);
 Router.use('/sort', sortRouter);
-Router.use('/discover', discoverRouter);
 Router.get('/verify', (req, res) => {
     // 获取前端传入的token
     // 对token进行校验
