@@ -68,6 +68,7 @@
 
 * .destination header {
   background-image: url(../pages/Destination/images/dest_bg.jpg);
+  background-size: contain;
   height: 125px;
 }
 
