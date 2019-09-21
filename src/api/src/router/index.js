@@ -11,7 +11,7 @@ const {
 const sortRouter = require('./sort');
 const userRouter = require('./user');
 const homeRouter = require('./home');
-
+const destinationRouter = require('./destination')
 
 
 // 利用中间bodyParse格式化请求参数
@@ -31,6 +31,7 @@ Router.use((req, res, next) => {
 })
 
 // 商品
+Router.use('/destination', destinationRouter);
 Router.use('/user', userRouter);
 Router.use('/home', homeRouter);
 Router.use('/sort', sortRouter);

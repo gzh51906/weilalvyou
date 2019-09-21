@@ -10,6 +10,7 @@
     #app,
     body,
     html {
+        background-color: #fff;
         width: 100%;
         height: 100%;
     }
@@ -18,6 +19,7 @@
         display: flex;
         margin: 0;
         background: #fff;
+        padding-top: 5px;
 
         li {
             font-size: 12px;
@@ -61,15 +63,25 @@
     }
 
     #destination {
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        box-sizing: border-box;
         height: 900px;
         overflow: auto;
-        background-color: orange;
+        // background-color: orange;
         margin-bottom: 55px;
 
         header {
-            background-image: url(../pages/Destination/images/dest_bg.jpg);
-            background-size: contain;
-            height: 125px;
+            background: url(../pages/Destination/images/dest_bg.jpg) no-repeat;
+            background-size: 100% 100%;
+            height: 122px;
+            position: fixed;
+            left: 0;
+            right: 0px;
+            top: 0;
 
             h3 {
                 height: 40px;
@@ -97,6 +109,130 @@
                     }
                 }
             }
+
+            .nav {
+                display: flex;
+                margin-top: 10px;
+                color: #fff;
+                height: 38px;
+                align-items: center;
+                padding: 0px 10px;
+
+                span {
+                    margin-right: 8px;
+                }
+
+                ul {
+                    display: flex;
+                    flex: 1;
+                    margin: 0px;
+                    overflow: auto;
+                    align-items: center;
+                    height: 100%;
+
+                    li {
+                        flex-shrink: 0;
+                        width: 15%;
+                        text-align: center;
+                        height: 100%;
+                        line-height: 38px;
+                        // border-bottom: 3px solid #ff8200;
+                    }
+                }
+            }
+
+        }
+
+        .content {
+            ul {
+                li {
+                    .top {
+                        position: relative;
+
+                        span {
+                            position: absolute;
+                            bottom: 0px;
+                            background: rgba(0, 0, 0, .65);
+                            color: #fff;
+                            width: 80px;
+                            height: 35px;
+                            line-height: 35px;
+                            text-align: center;
+                        }
+                    }
+
+                    .bottom {
+                        padding: 5px 10px;
+
+                        h3 {
+                            font-weight: 900
+                        }
+
+                        h5 {
+                            font-weight: 100;
+                            margin-bottom: 10px;
+                        }
+
+                        p {
+                            color: #fff;
+                            font-size: 12px;
+                            background-color: #82c8a0;
+                            width: 120px;
+                            border-radius: 30px;
+
+                            i {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #search {
+        height: 100%;
+        background-color: #fff;
+
+        header {
+            height: 46px;
+            line-height: 46px;
+            border-bottom: 1px solid #666;
+            margin-bottom: 10px;
+
+            .ant-input-search {
+                width: 85%;
+                margin: auto;
+                padding-left: 10px;
+
+                .ant-input {
+                    color: #999;
+                    background: #f4f4f4;
+                    border-radius: 35px;
+                    font-size: 12px;
+                    text-indent: 40px;
+                    height: 25px;
+                    border: transparent;
+                }
+
+                .ant-input-suffix {
+                    left: 20px;
+                    font-size: 18px;
+
+                    i {
+                        color: #999;
+                    }
+                }
+            }
+
+            .ant-btn-link {
+                color: #fe8100;
+            }
+        }
+
+        content {
+
+            padding: 0 10px;
         }
     }
 }
