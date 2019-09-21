@@ -11,12 +11,9 @@ const {
 const sortRouter = require('./sort');
 const userRouter = require('./user');
 const homeRouter = require('./home');
-<<<<<<< HEAD
 const destinationRouter = require('./destination')
-=======
 const discoverRouter = require('./discover');
 
->>>>>>> 45613485ed8b041fcdb68d2c092d51bb981f1b60
 
 
 // 利用中间bodyParse格式化请求参数
