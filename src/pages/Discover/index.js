@@ -5,29 +5,36 @@ class Discover extends Component {
   constructor(props){
     super(props);
     this.state={
-      list: []
+      list:[]
     }
   }
   componentDidMount(){
   this.onhand();
  }
- 
-
- 
 onhand=async(val)=>{
-  console.log(val);
-  let {data} =   await api.post('discover',{})
-  console.log(data);
+  if (val) {
+  let {data:{data:list}} =  await api.post('discover',{val});
+  this.setState({
+    list:list
+  })
+  }else{
+    let {data:{data:list}} =  await api.post('discover',{val:"推荐路线"});
+    this.setState({
+      list:list
+    })
+  console.log(list);
+
+  }
 }
+
   render(){
   let {list} =this.state;
     return(
-      
  <div id="discover">
    <div className="header">
     <ul className="nav">
      <li onClick={this.onhand.bind(this,"推荐路线")}>推荐•路线</li>
-     <li onClick={this.onhand.bind(this,"精美别墅")}>精品•美墅</li>
+     <li onClick={this.onhand.bind(this,"精品美墅")}>精品•美墅</li>
      <li onClick={this.onhand.bind(this,"优惠活动")}>优惠•活动</li>
      </ul>
    </div>
@@ -47,8 +54,9 @@ onhand=async(val)=>{
             </dl>
             </a>
             )
-          }) 
+          
         })
+      })
       }
    </div>
  </div>
