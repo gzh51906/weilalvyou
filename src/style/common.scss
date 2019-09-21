@@ -60,7 +60,7 @@
         }
     }
 
-    .destination {
+    #destination {
         height: 900px;
         overflow: auto;
         background-color: orange;
@@ -76,6 +76,26 @@
                 text-align: center;
                 color: #fff;
                 line-height: 40px;
+            }
+
+            .ant-input-search {
+                width: 95%;
+                margin: auto;
+                padding-left: 10px;
+
+
+                .ant-input {
+                    color: #ddd;
+                    background: rgba(0, 0, 0, .45);
+                    border-radius: 35px;
+                    font-size: 12px;
+                }
+
+                .ant-input-suffix {
+                    i {
+                        color: #fff;
+                    }
+                }
             }
         }
     }

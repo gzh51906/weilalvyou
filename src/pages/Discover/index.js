@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-require('./css/discover.css');
+import api from '../../api'
+require('./css/discover.scss');
 class Discover extends Component {
     constructor(props) {
         super(props);
@@ -10,22 +10,21 @@ class Discover extends Component {
         // this.handleClick = this.handleClick.bind(this);
     }
     componentDidMount() {
-
+        this.onhand();
     }
 
-    onhand = (val) => {
-        axios.post('http://localhost:1906/cart', { val })
-            .then(res => {
-                this.setState({
-                    list: res.data.data
-                })
-            })
+
+
+    onhand = async (val) => {
+        console.log(val);
+        let { data } = await api.post('discover', {})
+        console.log(data);
     }
     render() {
         let { list } = this.state;
         return (
 
-            <div>
+            <div id="discover">
                 <div className="header">
                     <ul className="nav">
                         <li onClick={this.onhand.bind(this, "推荐路线")}>推荐•路线</li>
