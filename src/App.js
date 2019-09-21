@@ -32,7 +32,7 @@ class App extends Component {
             <Redirect from="/" to="/home" exact />
           </Switch>
         </div>
-        <ul className="nav_footer_y" style={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}>
+        <ul className="nav_footer_y" style={{ position: 'fixed', bottom: 0, left: 0, right: 0, background:'#fff' }}>
           <li onClick={this.goto.bind(this, "./home")}><Icon type="home" />首页</li>
           <li onClick={this.goto.bind(this, "./destination")}><Icon type="environment" />目的地</li>
           <li onClick={this.goto.bind(this, "./thinktank")}><Icon type="plus-circle" theme="filled" className="colrname" />提交需求</li>
