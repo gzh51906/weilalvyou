@@ -1,0 +1,54 @@
+body{
+    background:#eee;
+}
+#discover{
+
+
+.header{
+    height:40px;
+    background:#fff;
+    margin-bottom:10px;
+}
+.nav{
+    height:100%;
+    display:flex;
+    line-height:40px;
+    border-bottom: 1px solid #ccc;
+    
+}
+.nav li{
+    height:100%;
+    border-right:1px solid #ccc;
+    width:33%;
+   text-align: center;
+}
+ .nav li:last-child{
+     border-right:none;
+ }
+ .main a{
+     display:flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+ }
+ .main dl{
+     width:354px;
+     background:#fff;
+     display: flex;
+ }
+ .main dl img{
+   width: 144px;
+   height:95px;
+ }
+ .main dd{
+     display: flex;
+     justify-content: space-around;
+ }
+ .main dd p{
+     color:#222;
+     width:90%;
+     margin-top:10px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     font-weight: normal;
+ }
+}

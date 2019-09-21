@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import api from '../../api'
-import axios from 'axios';
 require('./css/discover.scss');
 class Discover extends Component {
   constructor(props){
