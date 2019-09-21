@@ -7,6 +7,8 @@ import App from './App';
 
 // import store from './redux/store';
 
+
+
 render(
     <HashRouter>
         <App />
