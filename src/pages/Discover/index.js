@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
 import axios from 'axios';
 require('./css/discover.css');
 class Discover extends Component {
@@ -7,14 +6,6 @@ class Discover extends Component {
     super(props);
     this.state={
       list: []
-=======
-class Discover extends Component {
-
-    render() {
-        return (
-            <div>发现</div>
-        )
->>>>>>> bc6833fa32ca7ca765f3a2d55a359d543f033990
     }
     // this.handleClick = this.handleClick.bind(this);
   }
