@@ -11,8 +11,7 @@ import Discover from './pages/Discover';
 import Mine from './pages/Mine';
 import ThinkTank from './pages/ThinkTank';
 import Search from './pages/Destination/search'
-
-
+import Discoverlist from './pages/Discover/discoverlist'
 class App extends Component {
   state = {}
   goto = (path) => {
@@ -30,6 +29,7 @@ class App extends Component {
             <Route path="/mine" component={Mine} />
             <Route path="/login" component={Login} />
             <Route path="/search" component={Search} />
+            <Route path="/discoverlist/:id" component={Discoverlist}/>
             <Redirect from="/" to="/home" exact />
           </Switch>
         </div>

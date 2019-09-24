@@ -7,6 +7,11 @@ class Discover extends Component {
     this.state={
       list:[]
     }
+
+    }
+
+  goto = (id) =>{
+    this.props.history.push(`/discoverlist/${id}`)
   }
   componentDidMount(){
   this.onhand();
@@ -43,7 +48,7 @@ onhand=async(val)=>{
          list.map(item=>{
           return item.list.map(ele=>{
             return(
-              <a href="###" key={ele.id}>
+              <div className="lout" key={ele.id} onClick={this.goto.bind(this,ele.id)}>
               <dl>
               <dt><img  src={ `https://img.villaday.com${ele.imageUrl}`}/></dt>
               <dd>
@@ -52,7 +57,7 @@ onhand=async(val)=>{
             </p>
             </dd>
             </dl>
-            </a>
+            </div>
             )
           
         })
