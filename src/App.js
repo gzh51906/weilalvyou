@@ -11,7 +11,7 @@ import Discover from './pages/Discover';
 import Mine from './pages/Mine';
 import ThinkTank from './pages/ThinkTank';
 import Search from './pages/Destination/search'
-
+import Detail from './pages/Destination/detail'
 
 class App extends Component {
   state = {
@@ -19,23 +19,23 @@ class App extends Component {
     data: [
       {
         name: "首页",
-        path: "./home",
+        path: "/home",
         icon: "home"
       }, {
         name: "目的地",
-        path: "./destination",
+        path: "/destination",
         icon: "environment"
       }, {
         name: "提交需求",
-        path: "./thinktank",
+        path: "/thinktank",
         icon: "plus-circle"
       }, {
         name: "发现",
-        path: "./discover",
+        path: "/discover",
         icon: "global"
       }, {
         name: "我的",
-        path: "./mine",
+        path: "/mine",
         icon: "user"
       }
     ]
@@ -51,7 +51,7 @@ class App extends Component {
   render() {
     let { current, data } = this.state;
     let path1 = this.props.history.location.pathname;
-    path1=`.${path1}`;
+    path1 = `.${path1}`;
     return (
       <div >
         <div>
@@ -63,16 +63,17 @@ class App extends Component {
             <Route path="/mine" component={Mine} />
             <Route path="/login" component={Login} />
             <Route path="/search" component={Search} />
+            <Route path="/detail" component={Detail} />
             <Redirect from="/" to="/home" exact />
           </Switch>
         </div>
         {this.props.location.pathname == "/search" ? <></> : <ul className="nav_footer_y" style={{ position: 'fixed', bottom: 0, left: 0, right: 0, background: '#fff' }}>
           {
             data.map(item => {
-              return <li onClick={this.goto.bind(this, `${item.path}`)} key={item.name} className={item.path == current ? 'active' : '' || item.path==path1?'active':''}>
+              return <li onClick={this.goto.bind(this, `${item.path}`)} key={item.name} className={item.path == current ? 'active' : '' || item.path == path1 ? 'active' : ''}>
                 <Icon type={item.icon} className={item.name == '提交需求' ? 'colrname' : ''} theme={item.name == '提交需求' ? 'filled' : ''} />
                 {item.name}
-                </li>
+              </li>
             })
           }
         </ul>

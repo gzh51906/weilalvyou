@@ -27,15 +27,12 @@ Router.get('/', async (req, res) => {
 })
 
 // 查询指定
-Router.get('/content', async (req, res) => {
-    console.log(req.query);
-
+Router.post('/detailList', async (req, res) => {
     let {
-        sort
-    } = req.query;
-    console.log('----', sort);
-    let data = await find('citieslist', {
-        sort: sort
+        url
+    } = req.body;
+    let data = await find('detailList', {
+        url: url
     });
     // res.send('res')
     res.send(formatData({
@@ -43,7 +40,7 @@ Router.get('/content', async (req, res) => {
     }))
 })
 Router.post('/content', async (req, res) => {
-    console.log("post");
+    // console.log("post");
     let {
         sort
     } = req.body;

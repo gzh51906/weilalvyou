@@ -38,6 +38,17 @@ class Destination extends Component {
             data: list, current: sort
         })
     }
+    gotoDetail = (url) => {
+        //对数据进行解剖 得到需要的数据 /village/detail/dgw5agZ7Xn?timeStamp=1569057272108   ==>  dgw5agZ7Xn
+        console.log(url);
+        this.props.history.push(`/detail${url}`)
+        url = url.split("/")[3].split("?")[0]
+        console.log(url);
+        // this.props.history.push(`/detail/${url}`)
+
+
+
+    }
     componentDidMount() {
         this.getCityData();
         this.getContentData();
@@ -68,7 +79,7 @@ class Destination extends Component {
                 <ul>
                     {
                         data.map(item => {
-                            return <li key={item.imageURL}>
+                            return <li key={item.imageURL} onClick={this.gotoDetail.bind(this, item.url)}>
                                 <div className="top">
                                     <img src={`https://img.villaday.com${item.imageURL}`}></img>
                                     <span>￥<i>{item.displayPrice}</i>起</span>
