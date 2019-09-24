@@ -1,0 +1,73 @@
+{
+    "_id" : ObjectId("5d85e13c2649f01aabcab8ee"),
+    "cities" : [ 
+        {
+            "id" : "eV8nvv48JB",
+            "name" : "深圳"
+        }, 
+        {
+            "id" : "jJr6B7ZrW0",
+            "name" : "惠州"
+        }, 
+        {
+            "id" : "NX82LJvqeG",
+            "name" : "广州"
+        }, 
+        {
+            "id" : "MwqYWBA8xP",
+            "name" : "清远"
+        }, 
+        {
+            "id" : "51q1JzmrVQ",
+            "name" : "河源"
+        }, 
+        {
+            "id" : "5zqWQQ58PK",
+            "name" : "江门"
+        }, 
+        {
+            "id" : "n1GrkaGRMz",
+            "name" : "厦门"
+        }, 
+        {
+            "id" : "3D8D5lbRlY",
+            "name" : "三亚"
+        }, 
+        {
+            "id" : "eV8nvZj8JB",
+            "name" : "东莞"
+        }, 
+        {
+            "id" : "BbReOn5rLa",
+            "name" : "汕尾"
+        }, 
+        {
+            "id" : "bl8mMQd8GA",
+            "name" : "桂林"
+        }, 
+        {
+            "id" : "oLrGybMRE4",
+            "name" : "苏梅岛"
+        }, 
+        {
+            "id" : "x7RyQvgRb3",
+            "name" : "阳江"
+        }, 
+        {
+            "id" : "KyrgmAVRDe",
+            "name" : "马尔代夫"
+        }, 
+        {
+            "id" : "joq5llBRlp",
+            "name" : "珠海"
+        }, 
+        {
+            "id" : "yJrbWW78dY",
+            "name" : "汕头"
+        }, 
+        {
+            "id" : "Kv8E9Dv8M4",
+            "name" : "梅州"
+        }
+    ]
+}
