@@ -11,6 +11,7 @@ import Discover from './pages/Discover';
 import Mine from './pages/Mine';
 import ThinkTank from './pages/ThinkTank';
 import Search from './pages/Destination/search'
+import Discoverlist from './pages/Discover/discoverlist'
 import Detail from './pages/Destination/detail'
 import RealDetail from './pages/Destination/realDetail'
 
@@ -64,6 +65,7 @@ class App extends Component {
             <Route path="/mine" component={Mine} />
             <Route path="/login" component={Login} />
             <Route path="/search" component={Search} />
+            <Route path="/discoverlist/:id" component={Discoverlist}/>
             <Route path="/detail" component={Detail} />
             <Route path="/house/detail" component={RealDetail} />
             <Redirect from="/" to="/home" exact />
