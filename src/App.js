@@ -12,6 +12,7 @@ import Mine from './pages/Mine';
 import ThinkTank from './pages/ThinkTank';
 import Search from './pages/Destination/search'
 import Detail from './pages/Destination/detail'
+import RealDetail from './pages/Destination/realDetail'
 
 class App extends Component {
   state = {
@@ -64,6 +65,7 @@ class App extends Component {
             <Route path="/login" component={Login} />
             <Route path="/search" component={Search} />
             <Route path="/detail" component={Detail} />
+            <Route path="/house/detail" component={RealDetail} />
             <Redirect from="/" to="/home" exact />
           </Switch>
         </div>

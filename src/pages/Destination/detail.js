@@ -35,7 +35,15 @@ class detailHtml extends Component {
     componentDidMount() {
         let path1 = this.props.history.location.search
         let path = this.props.location.pathname.slice(7);
-        path = `${path}${path1}`
+        path = `${path}${path1}`;
+        let arr = ["/village/detail/n6jylpnylo?timeStamp=1569057272108", "/village/detail/dgw5agZ7Xn?timeStamp=1569057272108", "/village/detail/rKa7zQAmkx?timeStamp=1569057272108"];
+        let res = arr.includes(path);
+        if (res) {
+            path = path;
+        } else {
+            let index = Math.floor(Math.random() * 3);
+            path = arr[index];
+        }
         this.getData(path);
         setTimeout(() => {
             this.$tab = this.refs.tab;
@@ -45,18 +53,18 @@ class detailHtml extends Component {
             }
         }, 2000)
     }
+    componentWillUnmount() {
+        this.setState = (state, callback) => {
+            return;
+        };
+    }
     handleScroll = () => {
-        // console.log(this.state.navTop);
-
         let sTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-        // console.log(this.state.navTop, sTop, this.offsetTop);
-
         if (!this.state.navTop && sTop >= this.offsetTop) {
             this.setState({
                 navTop: true
             })
         }
-
         if (sTop < this.offsetTop) {
             this.setState({
                 navTop: false
@@ -64,8 +72,7 @@ class detailHtml extends Component {
         }
     }
     getData = async (path) => {
-        let { data: { data } } = await Api.post('destination/detailList', { url: path })
-        // console.log(data);
+        let { data: { data } } = await Api.post('destination/detailList', { url: path });
         if (data.length != 0) {
             this.setState({
                 around: data[0].around,
@@ -80,6 +87,11 @@ class detailHtml extends Component {
         this.setState({
             current: val
         })
+    }
+    go2detail = () => {
+        console.log("gogogo");
+        this.props.history.push('/house/detail')
+
     }
     render() {
         let { around, data, nav, current } = this.state;
@@ -109,7 +121,7 @@ class detailHtml extends Component {
                             current == 1 ? <ul className="houses">
                                 {
                                     list.map(item => {
-                                        return <li key={item.id}>
+                                        return <li key={item.id} onClick={this.go2detail}>
                                             <div className="top">
                                                 <img src={`https://img.villaday.com${item.imageUrl}`}></img>
                                                 <span>￥<i>{item.showMinPrice}</i>起</span>
