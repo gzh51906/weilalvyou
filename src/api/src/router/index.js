@@ -1,6 +1,7 @@
 const express = require('express');
 
 const Router = express.Router();
+const proxy = require('http-proxy-middleware');
 
 const {
     token,
@@ -13,6 +14,7 @@ const userRouter = require('./user');
 const homeRouter = require('./home');
 const destinationRouter = require('./destination')
 const discoverRouter = require('./discover');
+// let proxyRouter = require('./proxy');
 
 
 
@@ -31,7 +33,14 @@ Router.use((req, res, next) => {
         next();
     }
 })
-
+Router.use('/villa', proxy({
+    "target": "https://m.villaday.com",
+    "changeOrigin": true,
+    // 重写路径：参数第一个是地址中要删除的，第二个是要添加的内容
+    "pathRewrite": {
+        "^/villa": "/"
+    }
+}));
 // 商品
 Router.use('/destination', destinationRouter);
 Router.use('/user', userRouter);
@@ -60,6 +69,7 @@ Router.get('/verify', (req, res) => {
     }
 
 });
-
+// 地址以/proxty开头的请求，进入代理服务器
+// Router.use('/proxy', proxyRouter);
 
 module.exports = Router;

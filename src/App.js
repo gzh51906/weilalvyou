@@ -13,6 +13,7 @@ import ThinkTank from './pages/ThinkTank';
 import Search from './pages/Destination/search'
 import Discoverlist from './pages/Discover/discoverlist'
 import Detail from './pages/Destination/detail'
+import RealDetail from './pages/Destination/realDetail'
 
 class App extends Component {
   state = {
@@ -64,8 +65,9 @@ class App extends Component {
             <Route path="/mine" component={Mine} />
             <Route path="/login" component={Login} />
             <Route path="/search" component={Search} />
-            <Route path="/discoverlist/:id" component={Discoverlist}/>
+            <Route path="/discoverlist/:id" component={Discoverlist} />
             <Route path="/detail" component={Detail} />
+            <Route path="/house/detail" component={RealDetail} />
             <Redirect from="/" to="/home" exact />
           </Switch>
         </div>
@@ -82,7 +84,7 @@ class App extends Component {
         }
 
         {
-          this.props.location.pathname == "/thinktank" || this.props.location.pathname == "/search" ? <></> : <span className="online_serve"><Icon type="message" />在线咨询</span>
+          this.props.location.pathname == "/thinktank" || this.props.location.pathname == "/search" || this.props.location.pathname == "/house/detail" ? <></> : <span className="online_serve"><Icon type="message" />在线咨询</span>
         }
 
       </div >
