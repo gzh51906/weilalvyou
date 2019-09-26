@@ -16,11 +16,15 @@
   height: 100%;
 }
 
-* .active {
+* #app .active,
+* body .active,
+* html .active {
   color: #ff8200;
 }
 
-* .nav_footer_y {
+* #app .nav_footer_y,
+* body .nav_footer_y,
+* html .nav_footer_y {
   display: flex;
   margin: 0;
   background: #fff;
@@ -28,7 +32,9 @@
   width: 100%;
 }
 
-* .nav_footer_y li {
+* #app .nav_footer_y li,
+* body .nav_footer_y li,
+* html .nav_footer_y li {
   font-size: 12px;
   height: 100%;
   width: 20%;
@@ -37,16 +43,22 @@
   align-items: center;
 }
 
-* .nav_footer_y li i {
+* #app .nav_footer_y li i,
+* body .nav_footer_y li i,
+* html .nav_footer_y li i {
   font-size: 24px;
   margin-bottom: 5px;
 }
 
-* .nav_footer_y li .colrname {
+* #app .nav_footer_y li .colrname,
+* body .nav_footer_y li .colrname,
+* html .nav_footer_y li .colrname {
   color: #ff8200;
 }
 
-* .online_serve {
+* #app .online_serve,
+* body .online_serve,
+* html .online_serve {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -61,24 +73,32 @@
   color: #fff;
 }
 
-* .online_serve i {
+* #app .online_serve i,
+* body .online_serve i,
+* html .online_serve i {
   font-size: 20px;
   margin: 2px 0px;
 }
 
-* #destination {
+* #app #destination,
+* body #destination,
+* html #destination {
   box-sizing: border-box;
   height: 900px;
   overflow: auto;
   margin-bottom: 55px;
 }
 
-* #destination * {
+* #app #destination *,
+* body #destination *,
+* html #destination * {
   padding: 0;
   margin: 0;
 }
 
-* #destination header {
+* #app #destination header,
+* body #destination header,
+* html #destination header {
   background: url(../pages/Destination/images/dest_bg.jpg) no-repeat;
   background-size: 100% 100%;
   height: 122px;
@@ -89,20 +109,26 @@
   z-index: 2;
 }
 
-* #destination header h3 {
+* #app #destination header h3,
+* body #destination header h3,
+* html #destination header h3 {
   height: 40px;
   text-align: center;
   color: #fff;
   line-height: 40px;
 }
 
-* #destination header .ant-input-search {
+* #app #destination header .ant-input-search,
+* body #destination header .ant-input-search,
+* html #destination header .ant-input-search {
   width: 95%;
   margin: auto;
   padding-left: 10px;
 }
 
-* #destination header .ant-input-search .ant-input {
+* #app #destination header .ant-input-search .ant-input,
+* body #destination header .ant-input-search .ant-input,
+* html #destination header .ant-input-search .ant-input {
   color: #ddd;
   background: rgba(0, 0, 0, 0.45);
   border-radius: 35px;
@@ -111,11 +137,15 @@
   border: transparent;
 }
 
-* #destination header .ant-input-search .ant-input-suffix i {
+* #app #destination header .ant-input-search .ant-input-suffix i,
+* body #destination header .ant-input-search .ant-input-suffix i,
+* html #destination header .ant-input-search .ant-input-suffix i {
   color: #fff;
 }
 
-* #destination header .nav {
+* #app #destination header .nav,
+* body #destination header .nav,
+* html #destination header .nav {
   display: flex;
   margin-top: 10px;
   color: #fff;
@@ -124,11 +154,15 @@
   padding: 0px 10px;
 }
 
-* #destination header .nav span {
+* #app #destination header .nav span,
+* body #destination header .nav span,
+* html #destination header .nav span {
   margin-right: 8px;
 }
 
-* #destination header .nav ul {
+* #app #destination header .nav ul,
+* body #destination header .nav ul,
+* html #destination header .nav ul {
   display: flex;
   flex: 1;
   margin: 0px;
@@ -137,7 +171,9 @@
   height: 100%;
 }
 
-* #destination header .nav ul li {
+* #app #destination header .nav ul li,
+* body #destination header .nav ul li,
+* html #destination header .nav ul li {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
@@ -148,7 +184,9 @@
   position: relative;
 }
 
-* #destination header .nav ul li i {
+* #app #destination header .nav ul li i,
+* body #destination header .nav ul li i,
+* html #destination header .nav ul li i {
   position: absolute;
   bottom: 0px;
   display: inline-block;
@@ -157,26 +195,36 @@
   background-color: #ff8200;
 }
 
-* #destination header .nav ul .active {
+* #app #destination header .nav ul .active,
+* body #destination header .nav ul .active,
+* html #destination header .nav ul .active {
   color: #ff8200;
 }
 
-* #destination .content ul li {
+* #app #destination .content ul li,
+* body #destination .content ul li,
+* html #destination .content ul li {
   margin-bottom: 15px;
 }
 
-* #destination .content ul li .top {
+* #app #destination .content ul li .top,
+* body #destination .content ul li .top,
+* html #destination .content ul li .top {
   position: relative;
   width: 100%;
   height: 175px;
 }
 
-* #destination .content ul li .top img {
+* #app #destination .content ul li .top img,
+* body #destination .content ul li .top img,
+* html #destination .content ul li .top img {
   width: 100%;
   height: 175px;
 }
 
-* #destination .content ul li .top span {
+* #app #destination .content ul li .top span,
+* body #destination .content ul li .top span,
+* html #destination .content ul li .top span {
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -189,26 +237,36 @@
   font-size: 12px;
 }
 
-* #destination .content ul li .top span i {
+* #app #destination .content ul li .top span i,
+* body #destination .content ul li .top span i,
+* html #destination .content ul li .top span i {
   font-style: normal;
   font-size: 16px;
 }
 
-* #destination .content ul li .bottom {
+* #app #destination .content ul li .bottom,
+* body #destination .content ul li .bottom,
+* html #destination .content ul li .bottom {
   padding: 5px 10px;
 }
 
-* #destination .content ul li .bottom h3 {
+* #app #destination .content ul li .bottom h3,
+* body #destination .content ul li .bottom h3,
+* html #destination .content ul li .bottom h3 {
   font-weight: 900;
 }
 
-* #destination .content ul li .bottom h5 {
+* #app #destination .content ul li .bottom h5,
+* body #destination .content ul li .bottom h5,
+* html #destination .content ul li .bottom h5 {
   font-weight: 100;
   margin-bottom: 10px;
   color: #666;
 }
 
-* #destination .content ul li .bottom span {
+* #app #destination .content ul li .bottom span,
+* body #destination .content ul li .bottom span,
+* html #destination .content ul li .bottom span {
   color: #fff;
   font-size: 12px;
   background-color: #82c8a0;
@@ -216,25 +274,33 @@
   border-radius: 30px;
 }
 
-* #search {
+* #app #search,
+* body #search,
+* html #search {
   height: 100%;
   background-color: #fff;
 }
 
-* #search header {
+* #app #search header,
+* body #search header,
+* html #search header {
   height: 46px;
   line-height: 46px;
   border-bottom: 1px solid #666;
   margin-bottom: 10px;
 }
 
-* #search header .ant-input-search {
+* #app #search header .ant-input-search,
+* body #search header .ant-input-search,
+* html #search header .ant-input-search {
   width: 85%;
   margin: auto;
   padding-left: 10px;
 }
 
-* #search header .ant-input-search .ant-input {
+* #app #search header .ant-input-search .ant-input,
+* body #search header .ant-input-search .ant-input,
+* html #search header .ant-input-search .ant-input {
   color: #999;
   background: #f4f4f4;
   border-radius: 35px;
@@ -244,40 +310,56 @@
   border: transparent;
 }
 
-* #search header .ant-input-search .ant-input-suffix {
+* #app #search header .ant-input-search .ant-input-suffix,
+* body #search header .ant-input-search .ant-input-suffix,
+* html #search header .ant-input-search .ant-input-suffix {
   left: 20px;
   font-size: 18px;
 }
 
-* #search header .ant-input-search .ant-input-suffix i {
+* #app #search header .ant-input-search .ant-input-suffix i,
+* body #search header .ant-input-search .ant-input-suffix i,
+* html #search header .ant-input-search .ant-input-suffix i {
   color: #999;
 }
 
-* #search header .ant-btn-link {
+* #app #search header .ant-btn-link,
+* body #search header .ant-btn-link,
+* html #search header .ant-btn-link {
   color: #fe8100;
 }
 
-* #search content {
+* #app #search content,
+* body #search content,
+* html #search content {
   padding: 0 10px;
 }
 
-* #detail * {
+* #app #detail *,
+* body #detail *,
+* html #detail * {
   margin: 0;
   padding: 0;
 }
 
-* #detail img {
+* #app #detail img,
+* body #detail img,
+* html #detail img {
   width: 100%;
 }
 
-* #detail header {
+* #app #detail header,
+* body #detail header,
+* html #detail header {
   position: relative;
   height: 100% img;
   height-height: 180px;
   height-background: rgba(0, 0, 0, 0.3);
 }
 
-* #detail header .content {
+* #app #detail header .content,
+* body #detail header .content,
+* html #detail header .content {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -288,24 +370,34 @@
   align-items: center;
 }
 
-* #detail header .content h2,
-* #detail header .content p {
+* #app #detail header .content h2,
+* #app #detail header .content p,
+* body #detail header .content h2,
+* body #detail header .content p,
+* html #detail header .content h2,
+* html #detail header .content p {
   color: #fff;
 }
 
-* #detail header .content span {
+* #app #detail header .content span,
+* body #detail header .content span,
+* html #detail header .content span {
   color: #000;
   background-color: #fff;
   padding: 0 5px;
 }
 
-* #detail .nav {
+* #app #detail .nav,
+* body #detail .nav,
+* html #detail .nav {
   background-color: #fff;
   display: flex;
   height: 36px;
 }
 
-* #detail .nav li {
+* #app #detail .nav li,
+* body #detail .nav li,
+* html #detail .nav li {
   width: 25%;
   height: 100%;
   line-height: 36px;
@@ -313,7 +405,9 @@
   position: relative;
 }
 
-* #detail .nav li i {
+* #app #detail .nav li i,
+* body #detail .nav li i,
+* html #detail .nav li i {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -323,11 +417,15 @@
   background-color: #ff8200;
 }
 
-* #detail .nav .active {
+* #app #detail .nav .active,
+* body #detail .nav .active,
+* html #detail .nav .active {
   color: #ff8200;
 }
 
-* #detail .fixed {
+* #app #detail .fixed,
+* body #detail .fixed,
+* html #detail .fixed {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -335,58 +433,80 @@
   z-index: 9;
 }
 
-* #detail .discuss {
+* #app #detail .discuss,
+* body #detail .discuss,
+* html #detail .discuss {
   padding-top: 10px;
   background-color: #f5f5f5;
   margin-bottom: 50px;
 }
 
-* #detail .discuss li {
+* #app #detail .discuss li,
+* body #detail .discuss li,
+* html #detail .discuss li {
   margin-bottom: 10px;
   background-color: #fff;
   padding: 10px;
 }
 
-* #detail .discuss li .head {
+* #app #detail .discuss li .head,
+* body #detail .discuss li .head,
+* html #detail .discuss li .head {
   display: flex;
   align-items: center;
 }
 
-* #detail .discuss li .head img {
+* #app #detail .discuss li .head img,
+* body #detail .discuss li .head img,
+* html #detail .discuss li .head img {
   width: 35px;
   height: 35px;
   border-radius: 50%;
   margin-right: 10px;
 }
 
-* #detail .discuss li .head b {
+* #app #detail .discuss li .head b,
+* body #detail .discuss li .head b,
+* html #detail .discuss li .head b {
   font-weight: 100;
   padding: 0px 5px;
 }
 
-* #detail .discuss li .head span {
+* #app #detail .discuss li .head span,
+* body #detail .discuss li .head span,
+* html #detail .discuss li .head span {
   flex: 1;
 }
 
-* #detail .houses {
+* #app #detail .houses,
+* body #detail .houses,
+* html #detail .houses {
   padding-top: 10px;
   background-color: #f5f5f5;
 }
 
-* #detail .houses li {
+* #app #detail .houses li,
+* body #detail .houses li,
+* html #detail .houses li {
   margin-bottom: 15px;
 }
 
-* #detail .houses li .top {
+* #app #detail .houses li .top,
+* body #detail .houses li .top,
+* html #detail .houses li .top {
   position: relative;
   width: 100%;
 }
 
-* #detail .houses li .top .img {
+* #app #detail .houses li .top .img,
+* body #detail .houses li .top .img,
+* html #detail .houses li .top .img {
   width: 100%;
 }
 
-* #detail .houses li .top .headP {
+* #app #detail .houses li .top .headP,
+* body #detail .houses li .top .headP,
+* html #detail .houses li .top .headP {
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -396,7 +516,9 @@
   bottom: -29px;
 }
 
-* #detail .houses li .top span {
+* #app #detail .houses li .top span,
+* body #detail .houses li .top span,
+* html #detail .houses li .top span {
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -409,76 +531,106 @@
   font-size: 12px;
 }
 
-* #detail .houses li .bottom {
+* #app #detail .houses li .bottom,
+* body #detail .houses li .bottom,
+* html #detail .houses li .bottom {
   padding: 5px 10px;
 }
 
-* #detail .houses li .bottom h3 {
+* #app #detail .houses li .bottom h3,
+* body #detail .houses li .bottom h3,
+* html #detail .houses li .bottom h3 {
   font-weight: 900;
 }
 
-* #detail .houses li .bottom p {
+* #app #detail .houses li .bottom p,
+* body #detail .houses li .bottom p,
+* html #detail .houses li .bottom p {
   font-size: 12px;
   color: #666;
 }
 
-* #detail .houses li .bottom p:nth-child(3) {
+* #app #detail .houses li .bottom p:nth-child(3),
+* body #detail .houses li .bottom p:nth-child(3),
+* html #detail .houses li .bottom p:nth-child(3) {
   color: #999;
 }
 
-* #detail .introduce {
+* #app #detail .introduce,
+* body #detail .introduce,
+* html #detail .introduce {
   background-color: #f5f5f5;
   padding-top: 10px;
   margin-bottom: 45px;
 }
 
-* #detail .introduce p {
+* #app #detail .introduce p,
+* body #detail .introduce p,
+* html #detail .introduce p {
   background-color: #fff;
 }
 
-* #detail .around {
+* #app #detail .around,
+* body #detail .around,
+* html #detail .around {
   padding-top: 10px;
   background-color: #f5f5f5;
 }
 
-* #detail .around p {
+* #app #detail .around p,
+* body #detail .around p,
+* html #detail .around p {
   background-color: #fff;
 }
 
-* #login {
+* #app #login,
+* body #login,
+* html #login {
   background-color: #f5f5f5;
   padding: 10px;
   height: 100%;
 }
 
-* #login .form {
+* #app #login .form,
+* body #login .form,
+* html #login .form {
   width: 100%;
   background-color: #fff;
 }
 
-* #login .form li {
+* #app #login .form li,
+* body #login .form li,
+* html #login .form li {
   padding: 10px 0px;
   position: relative;
 }
 
-* #login .form li input {
+* #app #login .form li input,
+* body #login .form li input,
+* html #login .form li input {
   border-color: transparent;
   font-size: 18px;
   color: #333;
 }
 
-* #login .form li .ant-btn-primary {
+* #app #login .form li .ant-btn-primary,
+* body #login .form li .ant-btn-primary,
+* html #login .form li .ant-btn-primary {
   width: 127px;
   color: #fff;
   background-color: #f47f29;
   border-color: #f47f29;
 }
 
-* #login .form li .ant-input-suffix {
+* #app #login .form li .ant-input-suffix,
+* body #login .form li .ant-input-suffix,
+* html #login .form li .ant-input-suffix {
   display: none;
 }
 
-* #login .form li::before {
+* #app #login .form li::before,
+* body #login .form li::before,
+* html #login .form li::before {
   content: " ";
   position: absolute;
   left: 0;
@@ -495,52 +647,70 @@
   z-index: 2;
 }
 
-* #login .form li:last-child {
-  padding: 10px 20px;
+* #app #login .form li:last-child,
+* body #login .form li:last-child,
+* html #login .form li:last-child {
+  padding: 20px;
   display: flex;
   justify-content: space-around;
 }
 
-* #login .form li:last-child button {
+* #app #login .form li:last-child button,
+* body #login .form li:last-child button,
+* html #login .form li:last-child button {
   color: #000;
   background-color: #f8f8f8;
   border-color: rgba(102, 102, 102, 0.26);
 }
 
-* #login .form li:last-child .active {
+* #app #login .form li:last-child button:last-child,
+* body #login .form li:last-child button:last-child,
+* html #login .form li:last-child button:last-child {
   background-color: #f47f29;
   color: #fff;
 }
 
-* #realDetail {
+* #app #realDetail,
+* body #realDetail,
+* html #realDetail {
   height: 100%;
   background-color: #f5f5f5;
   margin-bottom: 60px;
   overflow: auto;
 }
 
-* #realDetail * {
+* #app #realDetail *,
+* body #realDetail *,
+* html #realDetail * {
   margin: 0;
   padding: 0;
 }
 
-* #realDetail header {
+* #app #realDetail header,
+* body #realDetail header,
+* html #realDetail header {
   background-color: #fff;
   margin-bottom: 10px;
   padding-bottom: 15px;
 }
 
-* #realDetail header .top {
+* #app #realDetail header .top,
+* body #realDetail header .top,
+* html #realDetail header .top {
   position: relative;
   width: 100%;
   height: 250px;
 }
 
-* #realDetail header .top img {
+* #app #realDetail header .top img,
+* body #realDetail header .top img,
+* html #realDetail header .top img {
   width: 100%;
 }
 
-* #realDetail header .top span {
+* #app #realDetail header .top span,
+* body #realDetail header .top span,
+* html #realDetail header .top span {
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -553,30 +723,42 @@
   font-size: 12px;
 }
 
-* #realDetail header .top span i {
+* #app #realDetail header .top span i,
+* body #realDetail header .top span i,
+* html #realDetail header .top span i {
   font-style: normal;
   font-size: 16px;
 }
 
-* #realDetail header .top span i:last-child {
+* #app #realDetail header .top span i:last-child,
+* body #realDetail header .top span i:last-child,
+* html #realDetail header .top span i:last-child {
   font-size: 12px;
 }
 
-* #realDetail header .title {
+* #app #realDetail header .title,
+* body #realDetail header .title,
+* html #realDetail header .title {
   padding: 10px;
 }
 
-* #realDetail header .title h3 {
+* #app #realDetail header .title h3,
+* body #realDetail header .title h3,
+* html #realDetail header .title h3 {
   font-size: 18px;
   color: #222;
   margin-bottom: 3px;
 }
 
-* #realDetail header .title p {
+* #app #realDetail header .title p,
+* body #realDetail header .title p,
+* html #realDetail header .title p {
   font-size: 12px;
 }
 
-* #realDetail header .title p span {
+* #app #realDetail header .title p span,
+* body #realDetail header .title p span,
+* html #realDetail header .title p span {
   color: #fff;
   position: relative;
   padding-left: 20px;
@@ -584,7 +766,9 @@
   border-radius: 3px;
 }
 
-* #realDetail header .title p span i {
+* #app #realDetail header .title p span i,
+* body #realDetail header .title p span i,
+* html #realDetail header .title p span i {
   position: absolute;
   left: -3px;
   display: inline-block;
@@ -594,68 +778,94 @@
   background-size: 120%;
 }
 
-* #realDetail header .title p span:nth-child(1) {
+* #app #realDetail header .title p span:nth-child(1),
+* body #realDetail header .title p span:nth-child(1),
+* html #realDetail header .title p span:nth-child(1) {
   background-color: #70d8ad;
   margin-right: 10px;
 }
 
-* #realDetail header .title p span:nth-child(1) i {
+* #app #realDetail header .title p span:nth-child(1) i,
+* body #realDetail header .title p span:nth-child(1) i,
+* html #realDetail header .title p span:nth-child(1) i {
   background-position: -3px -126px;
 }
 
-* #realDetail header .title p span:nth-child(2) {
+* #app #realDetail header .title p span:nth-child(2),
+* body #realDetail header .title p span:nth-child(2),
+* html #realDetail header .title p span:nth-child(2) {
   background-color: #ea9200;
 }
 
-* #realDetail header .title p span:nth-child(2) i {
+* #app #realDetail header .title p span:nth-child(2) i,
+* body #realDetail header .title p span:nth-child(2) i,
+* html #realDetail header .title p span:nth-child(2) i {
   background-position: -3px -32px;
 }
 
-* #realDetail header .title p span:nth-child(3) {
+* #app #realDetail header .title p span:nth-child(3),
+* body #realDetail header .title p span:nth-child(3),
+* html #realDetail header .title p span:nth-child(3) {
   color: #888;
   width: 50px;
   padding-left: 20px;
   font-size: 14px;
 }
 
-* #realDetail header .title p span:nth-child(4) {
+* #app #realDetail header .title p span:nth-child(4),
+* body #realDetail header .title p span:nth-child(4),
+* html #realDetail header .title p span:nth-child(4) {
   margin-top: 5px;
   color: #888;
   float: right;
 }
 
-* #realDetail .content .position {
+* #app #realDetail .content .position,
+* body #realDetail .content .position,
+* html #realDetail .content .position {
   padding: 10px;
   background-color: #fff;
   margin-bottom: 10px;
 }
 
-* #realDetail .content .position p {
+* #app #realDetail .content .position p,
+* body #realDetail .content .position p,
+* html #realDetail .content .position p {
   padding-left: 5px;
   color: #000;
 }
 
-* #realDetail .content .position span {
+* #app #realDetail .content .position span,
+* body #realDetail .content .position span,
+* html #realDetail .content .position span {
   color: #f86902;
   float: right;
 }
 
-* #realDetail .content .position p:first-child {
+* #app #realDetail .content .position p:first-child,
+* body #realDetail .content .position p:first-child,
+* html #realDetail .content .position p:first-child {
   border-left: 2px solid #f86902;
 }
 
-* #realDetail .content .position p:nth-child(2) {
+* #app #realDetail .content .position p:nth-child(2),
+* body #realDetail .content .position p:nth-child(2),
+* html #realDetail .content .position p:nth-child(2) {
   font-size: 12px;
 }
 
-* #realDetail .content .nav {
+* #app #realDetail .content .nav,
+* body #realDetail .content .nav,
+* html #realDetail .content .nav {
   background-color: #fff;
   display: flex;
   height: 46px;
   border-bottom: 1px solid #eee;
 }
 
-* #realDetail .content .nav li {
+* #app #realDetail .content .nav li,
+* body #realDetail .content .nav li,
+* html #realDetail .content .nav li {
   width: 33%;
   height: 100%;
   line-height: 46px;
@@ -663,7 +873,9 @@
   position: relative;
 }
 
-* #realDetail .content .nav li i {
+* #app #realDetail .content .nav li i,
+* body #realDetail .content .nav li i,
+* html #realDetail .content .nav li i {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -673,11 +885,15 @@
   background-color: #ff8200;
 }
 
-* #realDetail .content .nav .active {
+* #app #realDetail .content .nav .active,
+* body #realDetail .content .nav .active,
+* html #realDetail .content .nav .active {
   color: #ff8200;
 }
 
-* #realDetail .content .fixed {
+* #app #realDetail .content .fixed,
+* body #realDetail .content .fixed,
+* html #realDetail .content .fixed {
   position: fixed;
   top: 0px;
   left: 0px;
@@ -685,46 +901,62 @@
   z-index: 9;
 }
 
-* #realDetail .content .tab {
+* #app #realDetail .content .tab,
+* body #realDetail .content .tab,
+* html #realDetail .content .tab {
   background-color: #fff;
 }
 
-* #realDetail .content .tab .detail {
+* #app #realDetail .content .tab .detail,
+* body #realDetail .content .tab .detail,
+* html #realDetail .content .tab .detail {
   width: 100%;
   padding: 15px;
   background-color: #fff;
   position: relative;
 }
 
-* #realDetail .content .tab .detail .allp {
+* #app #realDetail .content .tab .detail .allp,
+* body #realDetail .content .tab .detail .allp,
+* html #realDetail .content .tab .detail .allp {
   max-height: 118px;
   overflow: hidden;
 }
 
-* #realDetail .content .tab .detail .allp p {
+* #app #realDetail .content .tab .detail .allp p,
+* body #realDetail .content .tab .detail .allp p,
+* html #realDetail .content .tab .detail .allp p {
   font-size: 13px;
   margin-bottom: 5px;
 }
 
-* #realDetail .content .tab .detail .max {
+* #app #realDetail .content .tab .detail .max,
+* body #realDetail .content .tab .detail .max,
+* html #realDetail .content .tab .detail .max {
   min-height: 630px;
 }
 
-* #realDetail .content .tab .detail li {
+* #app #realDetail .content .tab .detail li,
+* body #realDetail .content .tab .detail li,
+* html #realDetail .content .tab .detail li {
   width: 100%;
   position: absolute;
   bottom: -24px;
   text-align: center;
 }
 
-* #realDetail .content .tab .detail li span {
+* #app #realDetail .content .tab .detail li span,
+* body #realDetail .content .tab .detail li span,
+* html #realDetail .content .tab .detail li span {
   font-size: 12px;
   color: #f86902;
   padding: 5px;
   border: 1px solid #ff8200;
 }
 
-* #realDetail .content .tab .inf {
+* #app #realDetail .content .tab .inf,
+* body #realDetail .content .tab .inf,
+* html #realDetail .content .tab .inf {
   width: 100%;
   padding: 15px;
   background-color: #fff;
@@ -734,12 +966,16 @@
   position: relative;
 }
 
-* #realDetail .content .tab .inf p {
+* #app #realDetail .content .tab .inf p,
+* body #realDetail .content .tab .inf p,
+* html #realDetail .content .tab .inf p {
   padding-left: 2px;
   border-left: #ea9200 2px solid;
 }
 
-* #realDetail .content .tab .inf img {
+* #app #realDetail .content .tab .inf img,
+* body #realDetail .content .tab .inf img,
+* html #realDetail .content .tab .inf img {
   position: absolute;
   right: 15px;
   top: 40px;
@@ -748,52 +984,183 @@
   border-radius: 50%;
 }
 
-* #realDetail .content .tab .inf li {
+* #app #realDetail .content .tab .inf li,
+* body #realDetail .content .tab .inf li,
+* html #realDetail .content .tab .inf li {
   margin-bottom: 10px;
 }
 
-* #realDetail .content .tab .inf div {
+* #app #realDetail .content .tab .inf div,
+* body #realDetail .content .tab .inf div,
+* html #realDetail .content .tab .inf div {
   width: 100%;
   text-align: center;
   border-top: 1px solid #eee;
   padding: 10px 0px;
 }
 
-* #realDetail .content .tab .facility {
+* #app #realDetail .content .tab .facility,
+* body #realDetail .content .tab .facility,
+* html #realDetail .content .tab .facility {
   padding: 15px;
   color: #000;
   border-top: 10px solid #eee;
 }
 
-* #realDetail .content .tab .facility p {
+* #app #realDetail .content .tab .facility p,
+* body #realDetail .content .tab .facility p,
+* html #realDetail .content .tab .facility p {
   border-left: #ea9200 2px solid;
   padding-left: 2px;
 }
 
-* #realDetail .content .tab .facility ul {
+* #app #realDetail .content .tab .facility ul,
+* body #realDetail .content .tab .facility ul,
+* html #realDetail .content .tab .facility ul {
   display: flex;
   flex-wrap: wrap;
   color: #999;
   margin-top: 10px;
 }
 
-* #realDetail .content .tab .facility ul li {
+* #app #realDetail .content .tab .facility ul li,
+* body #realDetail .content .tab .facility ul li,
+* html #realDetail .content .tab .facility ul li {
   width: 20%;
   height: 40px;
   text-align: center;
 }
 
-* #realDetail .content .tab .around,
-* #realDetail .content .tab .introduce {
+* #app #realDetail .content .tab .around,
+* #app #realDetail .content .tab .introduce,
+* body #realDetail .content .tab .around,
+* body #realDetail .content .tab .introduce,
+* html #realDetail .content .tab .around,
+* html #realDetail .content .tab .introduce {
   padding-top: 10px;
 }
 
-* #realDetail .content .tab .around img,
-* #realDetail .content .tab .introduce img {
+* #app #realDetail .content .tab .around img,
+* #app #realDetail .content .tab .introduce img,
+* body #realDetail .content .tab .around img,
+* body #realDetail .content .tab .introduce img,
+* html #realDetail .content .tab .around img,
+* html #realDetail .content .tab .introduce img {
   width: 100%;
 }
 
-* .ant-spin {
+* #app .ant-spin,
+* body .ant-spin,
+* html .ant-spin {
   width: 100%;
   height: 1000px;
+}
+
+* #app #mine,
+* body #mine,
+* html #mine {
+  width: 100%;
+  height: 100%;
+}
+
+* #app #mine header,
+* body #mine header,
+* html #mine header {
+  width: 100%;
+  height: 180px;
+  background: url(../pages/Destination/images/head.jpg) no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+
+* #app #mine header img,
+* body #mine header img,
+* html #mine header img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: pink;
+}
+
+* #app #mine header .ant-avatar,
+* body #mine header .ant-avatar,
+* html #mine header .ant-avatar {
+  border: 2px solid #fff;
+  background-color: #fbf4f4;
+}
+
+* #app #mine header .ant-avatar svg,
+* body #mine header .ant-avatar svg,
+* html #mine header .ant-avatar svg {
+  width: 48px;
+  height: 48px;
+}
+
+* #app #mine header span,
+* body #mine header span,
+* html #mine header span {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+* #app #mine header b,
+* body #mine header b,
+* html #mine header b {
+  display: inline-block;
+  width: 80px;
+  height: 25px;
+  text-align: center;
+  position: absolute;
+  right: 10px;
+  top: 142px;
+}
+
+* #app #mine header b i,
+* body #mine header b i,
+* html #mine header b i {
+  margin-right: 8px;
+}
+
+* #app #mine .content,
+* body #mine .content,
+* html #mine .content {
+  padding: 0px 10px;
+}
+
+* #app #mine .content *,
+* body #mine .content *,
+* html #mine .content * {
+  margin: 0;
+  padding: 0;
+}
+
+* #app #mine .content p,
+* body #mine .content p,
+* html #mine .content p {
+  display: flex;
+  height: 48px;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+* #app #mine .content p i,
+* body #mine .content p i,
+* html #mine .content p i {
+  margin-right: 10px;
+}
+
+* #app #mine .content p span,
+* body #mine .content p span,
+* html #mine .content p span {
+  flex: 1;
+}
+
+* #app .ant-message,
+* body .ant-message,
+* html .ant-message {
+  top: 210px;
 }
