@@ -34,6 +34,29 @@ class Mine extends Component {
         cookie.remove('user');
         this.checkLogin();
     }
+    goto = (val) => {
+        // 1->我的订单   2->我的共享卡   3->优惠券   4->我想去  5->浏览记录
+        switch (val) {
+            case 1:
+                this.props.history.push('/order')
+                break;
+            case 2:
+                this.props.history.push('/sharecard')
+                break;
+            case 3:
+                this.props.history.push('/coupon')
+                break;
+            case 4:
+                this.props.history.push('/want')
+                break;
+            case 5:
+                this.props.history.push('/record')
+                break;
+            default:
+                break;
+        }
+
+    }
 
     render() {
         let { content, user } = this.state;
@@ -46,7 +69,7 @@ class Mine extends Component {
                 <div className="content">
                     {
                         content.map(item => {
-                            return <p key={item.id}><Icon type={item.icon} /><span>{item.text}</span><Icon type="right" />
+                            return <p key={item.id} onClick={this.goto.bind(this, item.id)}><Icon type={item.icon} /><span>{item.text}</span><Icon type="right" />
                             </p>
                         })
                     }

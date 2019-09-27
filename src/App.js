@@ -14,6 +14,12 @@ import Search from './pages/Destination/search'
 import Discoverlist from './pages/Discover/discoverlist'
 import Detail from './pages/Destination/detail'
 import RealDetail from './pages/Destination/realDetail'
+import Order from './pages/Mine/order'
+import Coupon from './pages/Mine/Coupon'
+import Record from './pages/Mine/Record'
+import Want2Go from './pages/Mine/Want2Go'
+import shareCard from './pages/Mine/shareCard'
+
 
 class App extends Component {
   state = {
@@ -68,6 +74,11 @@ class App extends Component {
             <Route path="/discoverlist/:id" component={Discoverlist} />
             <Route path="/detail" component={Detail} />
             <Route path="/house/detail" component={RealDetail} />
+            <Route path="/order" component={Order} />
+            <Route path="/coupon" component={Coupon} />
+            <Route path="/record" component={Record} />
+            <Route path="/want" component={Want2Go} />
+            <Route path="/sharecard" component={shareCard} />
             <Redirect from="/" to="/home" exact />
           </Switch>
         </div>
