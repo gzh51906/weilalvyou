@@ -70,8 +70,7 @@ class Login extends Component {
         // 点击登录
         // 验证信息登录
         let { pwd_input, pwd_send, use } = this.state;
-        // console.log(pwd_input, pwd_send);
-        if (pwd_input == pwd_send) {
+        if (pwd_input == pwd_send && pwd_send.length != 0) {
             this.props.history.push("/mine");
             cookie.save('user', use)
         } else {
