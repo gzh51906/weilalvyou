@@ -23,7 +23,7 @@ onhand=async(val)=>{
       list:list
     })
   console.log(list);
-
+ 
   }
 }
 
@@ -39,7 +39,7 @@ onhand=async(val)=>{
      </ul>
    </div>
    <div className="main">
-     {  
+     {
          list.map(item=>{
           return item.list.map(ele=>{
             return(
@@ -54,13 +54,13 @@ onhand=async(val)=>{
             </dl>
             </a>
             )
-          
+
         })
       })
       }
    </div>
  </div>
-  
+
     )
   }
 }
