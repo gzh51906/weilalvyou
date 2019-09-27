@@ -14,6 +14,7 @@ class DetailHtml extends Component {
 
     }
     render() {
+
         return (<div id="realDetail">
             <header>
                 我是头部

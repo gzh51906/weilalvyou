@@ -1,0 +1,539 @@
+// #app {
+// }
+
+#realDetail2 {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 80px;
+    width: 100%;
+
+    .banner {
+        position: relative;
+
+        .ant-carousel {
+            .slick-slide {
+                text-align: center;
+                height: 6.666667rem;
+                line-height: 6.666667rem;
+                background: #364d79;
+                overflow: hidden;
+            }
+
+            .slick-slide h3 {
+                color: #fff;
+            }
+
+            .slick-slider>ul {
+                display: none !important
+            }
+
+            .slick-cloned {
+                div {
+                    height: 100%;
+                }
+
+            }
+
+            .slick-slide img {
+                width: 100%;
+                height: 100%;
+            }
+
+
+        }
+
+        .bannerPrice {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, .65);
+            color: #fff;
+            font-size: .255rem;
+            z-index: 10;
+            width: 3.56rem;
+            height: .906667rem;
+            line-height: .9rem;
+            text-align: center;
+
+            span {
+                b {
+                    font-size: .45rem;
+                }
+            }
+        }
+    }
+
+    .hIntroduct {
+        // height: 2.5584rem;
+        padding: .3rem;
+        box-sizing: border-box;
+
+        h3 {
+            line-height: .6rem;
+            font-size: .45rem;
+        }
+
+        p {
+            font-size: 0;
+
+            i:first-of-type {
+                display: inline-block;
+                width: .6rem;
+                height: .546667rem;
+                background: url("../pages/Destination/images/vmark_Icon.png") no-repeat;
+                background-size: .6rem 5.09rem;
+                background-position: 0 -3rem;
+                vertical-align: middle;
+            }
+
+            i:nth-of-type(2) {
+                display: inline-block;
+                width: .6rem;
+                height: .546667rem;
+                background: url("../pages/Destination/images/vmark_Icon.png") no-repeat;
+                background-size: .6rem 5.09rem;
+                background-position: 0 -0.75rem;
+                vertical-align: middle;
+            }
+
+            span:first-of-type {
+                background-color: #70d8ad;
+                font-size: .27rem;
+                line-height: .423333rem;
+                padding: 0.04rem .08rem 0.05rem .373333rem;
+                vertical-align: middle;
+                color: white;
+            }
+
+            span:nth-of-type(2) {
+                background-color: #ea9200;
+                ;
+                font-size: .27rem;
+                line-height: .423333rem;
+                padding: 0.04rem .08rem 0.05rem .373333rem;
+                vertical-align: middle;
+                color: white;
+            }
+
+            span:nth-of-type(3) {
+                margin-left: .266667rem;
+                vertical-align: middle;
+                font-size: .33rem;
+            }
+        }
+
+        div {
+            // height: .551733rem;
+            padding: .15rem 0;
+            overflow: hidden;
+
+            span:nth-of-type(1) {
+                float: left;
+                font-size: .3rem;
+                line-height: .533333rem;
+                color: #ffb423;
+                padding: 0 .15rem;
+                border: 1px solid #ffeece;
+                border-radius: 0.2rem;
+                margin-right: .08rem;
+            }
+
+            span:nth-of-type(2) {
+                float: left;
+                font-size: .3rem;
+                line-height: .533333rem;
+                color: #ffb423;
+                padding: 0 .15rem;
+                border: 1px solid #ffeece;
+                border-radius: 0.2rem;
+            }
+
+            span:nth-of-type(3) {
+                float: right;
+                font-size: .255rem;
+                color: #aaa;
+            }
+        }
+
+    }
+
+    .pubCell {
+        margin-top: .195rem;
+
+        .pubCell_top {
+            padding: .225rem .3rem .15rem .3rem;
+            font-size: .384rem;
+            font-weight: 700;
+            line-height: .81rem;
+
+            &::after {
+                content: "";
+                float: left;
+                width: .08rem;
+                height: .48rem;
+                background: #fe8100;
+                margin: .15rem .1rem 0 0;
+            }
+        }
+
+        .pubCell_bottom {
+            padding: 0 .315rem .405rem .315rem;
+            overflow: hidden;
+            font-size: .384rem;
+
+            p:nth-of-type(1) {
+                float: left;
+
+                i {
+                    color: #ff8200;
+                }
+            }
+
+            p:nth-of-type(2) {
+                float: right;
+                color: #ff8200;
+            }
+        }
+    }
+
+    //三个切换选项卡
+    .toggle {
+        margin-top: .195rem;
+        height: 1.41rem;
+        overflow: hidden;
+
+        li {
+            float: left;
+            font-size: .384rem;
+            line-height: 1.373333rem;
+            padding: 0 .2rem;
+            margin: 0 .3rem;
+        }
+
+        li:first-child {
+            margin-left: .8rem;
+        }
+
+        .toggleActive {
+            border-bottom: 2px solid #ff8200;
+            color: #fe8100;
+        }
+    }
+
+    //三个切换选项卡（fixed）
+    .toggle_fix {
+        position: fixed;
+        top: 0;
+        height: 1.41rem;
+        overflow: hidden;
+        background: white;
+        width: 100%;
+        margin-left: -3px;
+
+        li {
+            float: left;
+            font-size: .384rem;
+            line-height: 1.373333rem;
+            padding: 0 .2rem;
+            margin: 0 .3rem;
+        }
+
+        li:first-child {
+            margin-left: .8rem;
+        }
+
+        .toggleActive {
+            border-bottom: 2px solid #ff8200;
+            color: #fe8100;
+        }
+    }
+
+    .toggle_container {
+        .toggle_container_text {
+            max-height: 3rem;
+            overflow: hidden;
+            padding: .66rem .33rem 0 .33rem;
+            margin-bottom: .51rem;
+
+            p {
+                font-size: .33rem;
+                line-height: .525rem;
+
+                strong {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .viewAllcfg2 {
+            text-align: center;
+
+            a {
+                display: inline-block;
+                border: 1px solid #ff8200;
+                font-size: .3rem;
+                line-height: .6rem;
+                padding: 0 .3rem;
+                color: #ff8200;
+            }
+        }
+
+    }
+
+    // 评价
+    .evaluation {
+        .evaluation_top {
+            padding: .225rem .3rem .15rem .3rem;
+            font-size: .384rem;
+            font-weight: 700;
+            line-height: .81rem;
+
+            &::after {
+                content: "";
+                float: left;
+                width: .08rem;
+                height: .48rem;
+                background: #fe8100;
+                margin: .15rem .1rem 0 0;
+            }
+        }
+
+        .evaluation_container {
+            padding: 0 .3rem .3rem .3rem;
+            overflow: hidden;
+
+            .userhead {
+                float: left;
+                width: .87rem;
+                height: .87rem;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .userinfo {
+                float: left;
+
+                p:nth-of-type(1) {
+                    font-size: .33rem;
+                }
+
+                p:nth-of-type(2) {
+                    font-size: .2805rem;
+                    color: #aaa;
+                    ;
+                }
+            }
+
+            .star {
+                float: right;
+                width: 2.466667rem;
+                height: 0.5rem;
+                background: url("../pages/Destination/images/star.png") repeat-x 0 0 / .5rem .9rem;
+            }
+        }
+
+        .user_words {
+            padding: 0 0 .3rem 0;
+            margin: 0 .3rem;
+            font-size: .3rem;
+            line-height: .45rem;
+            border-bottom: 1px solid #F5F5F5;
+        }
+
+        .more_evaluation {
+            height: .933333rem;
+            line-height: .933333rem;
+            font-size: .33rem;
+            text-align: center;
+            color: rgb(34, 34, 34);
+
+            i {
+                color: #d2d2d2;
+            }
+        }
+    }
+
+    // 房东信息
+    .landlord {
+        .evaluation_container {
+            .userinfo {
+                p:nth-of-type(1) {
+                    color: #222;
+                    font-weight: bold;
+                }
+
+                p:nth-of-type(2) {
+                    color: #222;
+
+                    i {
+                        color: #ff8200;
+                    }
+                }
+            }
+
+            .userhead {
+                float: right;
+            }
+        }
+    }
+
+    // 配套设施
+    .facilities {
+        .all_facilities {
+            color: #888;
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                width: 2rem;
+                margin-bottom: .78rem;
+
+                p {
+                    font-size: .33rem;
+                    text-align: center;
+
+                    i {
+                        font-size: .75rem;
+                    }
+                }
+            }
+        }
+
+        .viewAllcfg2 {
+            text-align: center;
+
+            a {
+                display: inline-block;
+                border: 1px solid #ff8200;
+                font-size: .3rem;
+                line-height: .6rem;
+                padding: 0 .3rem;
+                color: #ff8200;
+            }
+        }
+    }
+
+    //是否展开
+    .open_active {
+        min-height: 3rem;
+        max-height: none !important;
+    }
+
+
+    // 周边美食娱乐,小区环境
+    .cate,
+    .environment {
+        p {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    //预定服务
+    .booking {
+        .evaluation_top {
+            span {
+                float: right;
+                font-size: .27rem;
+                color: red;
+            }
+        }
+    }
+
+    //弹出的对话框
+    .talk {
+        width: 7rem;
+        height: 1.866667rem;
+        background-color: #f47f29;
+        overflow: hidden;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 12;
+        ;
+
+        p {
+            margin: .266667rem .35rem 0 .35rem;
+        }
+
+        p:nth-child(1) {
+            font-size: .28rem;
+            margin-bottom: .56rem;
+            color: white;
+        }
+
+        p:nth-child(2) {
+            font-size: .266667rem;
+
+            span:nth-child(1) {
+                color: #9e4809;
+                display: inline-block;
+                border: 1px solid #fff;
+                border-radius: 3px;
+                background: white;
+                padding: 0 .066667rem;
+            }
+
+            span:nth-child(2) {
+                color: white;
+                display: inline-block;
+                border: 1px solid #fff;
+                border-radius: 3px;
+                padding: 0 .066667rem;
+                margin-left: .133333rem;
+            }
+        }
+
+        //关闭（x）小图标
+        .anticon-close {
+            font-size: .24rem;
+            position: absolute;
+            right: .106667rem;
+            top: .106667rem;
+        }
+
+    }
+}
+
+//弹出的对话框
+.ant-modal-content {
+    .ant-modal-title {
+        font-size: .44rem;
+        line-height: .44rem;
+        text-align: center;
+    }
+
+    .ant-modal-body {
+        max-height: 9.16rem;
+        overflow-y: auto;
+
+        .all_facilities {
+            color: #888;
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                width: 1.5rem;
+                margin-bottom: .4rem;
+
+                p {
+                    font-size: .33rem;
+                    text-align: center;
+
+                    i {
+                        font-size: .75rem;
+                    }
+                }
+            }
+        }
+
+        .all_facilities:nth-child(n+2) {
+            border-top: 1px solid #cccccc;
+            padding-top: .32rem;
+        }
+    }
+}
