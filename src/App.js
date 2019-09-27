@@ -15,6 +15,12 @@ import Discoverlist from './pages/Discover/discoverlist'
 import Detail from './pages/Destination/detail'
 import RealDetail from './pages/Destination/realDetail'
 import RealDetail2 from './pages/Destination/realDetail2'
+import Order from './pages/Mine/order'
+import Coupon from './pages/Mine/Coupon'
+import Record from './pages/Mine/Record'
+import Want2Go from './pages/Mine/Want2Go'
+import shareCard from './pages/Mine/shareCard'
+
 
 class App extends Component {
   state = {
@@ -70,6 +76,11 @@ class App extends Component {
             <Route path="/detail" component={Detail} />
             <Route path="/house/detail" component={RealDetail} />
             <Route path="/house/detail2" component={RealDetail2} />
+            <Route path="/order" component={Order} />
+            <Route path="/coupon" component={Coupon} />
+            <Route path="/record" component={Record} />
+            <Route path="/want" component={Want2Go} />
+            <Route path="/sharecard" component={shareCard} />
             <Redirect from="/" to="/home" exact />
           </Switch>
         </div>
@@ -86,7 +97,7 @@ class App extends Component {
         }
 
         {
-          this.props.location.pathname == "/thinktank" || this.props.location.pathname == "/search" ? <></> : <span className="online_serve"><Icon type="message" />在线咨询</span>
+          this.props.location.pathname == "/thinktank" || this.props.location.pathname == "/search" || this.props.location.pathname == "/house/detail" ? <></> : <span className="online_serve"><Icon type="message" />在线咨询</span>
         }
 
       </div >
